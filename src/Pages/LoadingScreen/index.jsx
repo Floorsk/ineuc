@@ -9,6 +9,7 @@ import {
 } from './styles'
 
 import load from '../../assets/music-loading.mp3'
+import troll from '../../assets/troll.mp3'
 
 const LoadingScreen = () => {
 
@@ -26,7 +27,7 @@ const LoadingScreen = () => {
     useEffect(() => {
 
         const sound = new Howl({
-            src: load
+            src: troll
         })
 
         sound.play()
