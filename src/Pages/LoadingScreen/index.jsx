@@ -26,17 +26,17 @@ const LoadingScreen = () => {
 
     useEffect(() => {
 
-        const sound = new Howl({
+        /* const sound = new Howl({
             src: troll
         })
 
-        sound.play()
+        sound.play() */
       
         setTimeout(() => {
 
             navigate('/home')
 
-        }, 12000)
+        }, 3000)
       
     }, [])
     
