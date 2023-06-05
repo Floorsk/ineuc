@@ -11,6 +11,7 @@ import Home from "../Pages/Home";
 import Help from "../Pages/Help";
 import UserProvider from '../Context/UserContext'
 import LoadingScreen from "../Pages/LoadingScreen";
+import ToUse from "../Pages/ToUse";
 
 const Router = () => {
 
@@ -43,6 +44,11 @@ const Router = () => {
         {
             path: '/loading',
             element: <LoadingScreen/>,
+            errorElement: <ErrorPage />
+        },
+        {
+            path: '/touse',
+            element: <ToUse/>,
             errorElement: <ErrorPage />
         },
         {

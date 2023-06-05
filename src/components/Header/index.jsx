@@ -20,11 +20,11 @@ const Header = () => {
                     <NavContent>
 
                         <NavButtons>
-                            <Link to={'#'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}><FcCalendar size={'35px'} /><Span>INEUC </Span>não é um calendário</Link>
+                            <Link to={'/home'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}><FcCalendar size={'35px'} /><Span>INEUC </Span>não é um calendário</Link>
                         </NavButtons>
 
                         <NavButtons>
-                            <Link to={'#'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Como usar</Link>
+                            <Link to={'/touse'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Como usar</Link>
                         </NavButtons>
 
                         <NavButtons>

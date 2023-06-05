@@ -2,10 +2,13 @@ import { useEffect, useState, useContext } from 'react';
 import { PacmanLoader } from 'react-spinners'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../Context/UserContext';
+import { Howl } from 'howler';
 
 import {
     Screen
 } from './styles'
+
+import load from '../../assets/music-loading.mp3'
 
 const LoadingScreen = () => {
 
@@ -21,12 +24,18 @@ const LoadingScreen = () => {
     };
 
     useEffect(() => {
+
+        const sound = new Howl({
+            src: load
+        })
+
+        sound.play()
       
         setTimeout(() => {
 
             navigate('/home')
 
-        }, 3000)
+        }, 12000)
       
     }, [])
     
