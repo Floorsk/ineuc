@@ -6,12 +6,14 @@ export const WelcomeArea = styled.div`
 `;
 
 export const Title = styled.h1`
-
+    margin: 10px 0;
+    color: #ff6961;
+    font-family: 'Chokokutai';
 `;
 
 export const MainContent = styled.section`
     width: 90%;
-    height: 80%;
+    min-height: 80vh;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 5px 5px 15px #C9C9C9;
@@ -26,6 +28,11 @@ export const HabbitContent = styled.ul`
     justify-content: center;
     margin: 10px 0;
     list-style: none;
+`;
+
+export const InvisibleFooter = styled.div`
+    width: 100%;
+    height: 20px;
 `;
 
 /* Modal */

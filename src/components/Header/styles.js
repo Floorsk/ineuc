@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 
 export const HeaderContainer = styled.header`
-    width: 100vw;
-    height: 4.5rem;
+    width: 100%;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
