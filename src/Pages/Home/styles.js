@@ -12,8 +12,9 @@ export const Title = styled.h1`
 export const MainContent = styled.section`
     width: 90%;
     height: 80%;
-    border: 1px solid black;
-
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #C9C9C9;
 `;
 
 export const HabbitContent = styled.ul`
@@ -41,12 +42,24 @@ export const ModalContainer = styled.div`
 export const FormBox = styled.div`
     width: 50%;
     height: 60%;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+`;
+
+export const CloseArea = styled.div`
+    width: 95%;
+    height: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+`;
+
+export const ContentArea = styled.div`
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
-    border: 1px solid black;
 `;
 
 export const ModalTitle = styled.h1`

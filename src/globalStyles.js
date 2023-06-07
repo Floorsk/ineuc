@@ -15,11 +15,9 @@ const GlobalStyles = createGlobalStyle`
         align-items: center;
     }
 
-    /* body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
+    body {
+        background-color: #FAFAFA;
+    }
 `;
 
 export default GlobalStyles;

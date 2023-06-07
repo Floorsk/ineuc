@@ -2,9 +2,11 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: 50px;
+    height: 100px;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    
 `;
 
 export const ButtonArea = styled.div`
@@ -16,11 +18,14 @@ export const ButtonArea = styled.div`
 `;
 
 export const CreateItem = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     color: #FFFFFF;
     background-color: #2181db;
     border: 0px;
-    border-radius: 1px;
+    border-radius: 5px;
     cursor: pointer;
 `;
 

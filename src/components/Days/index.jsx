@@ -6,12 +6,14 @@ import {
     Items
 } from './styles'
 
+import { HiPlus } from 'react-icons/hi' 
+
 const Days = ({ press }) => {
     return (
         <Container>
 
             <ButtonArea onClick={press}>
-                <CreateItem>Adicione um item</CreateItem>
+                <CreateItem>Adicione um item<HiPlus size={18} style={{ marginLeft: '2.5px'}} color='#FFFFFFFF'/></CreateItem>
             </ButtonArea>
 
 

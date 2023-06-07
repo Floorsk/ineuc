@@ -3,6 +3,8 @@ import { Modal, TextField, Button } from '@mui/material'
 import { Link, useAsyncError, useNavigate } from 'react-router-dom'
 import { auth, firestore, firebase } from '../../../firebase'
 import { Howl } from 'howler'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 import { UserContext } from '../../Context/UserContext'
 
@@ -13,8 +15,12 @@ import {
     HabbitContent,
     ModalContainer,
     FormBox,
+    CloseArea,
+    ContentArea,
     ModalTitle,
 } from './styles'
+
+import { HiX } from 'react-icons/hi'
 
 import Header from '../../components/Header'
 import Days from '../../components/Days'
@@ -25,6 +31,9 @@ import deleteAudio from '../../assets/delete.mp3'
 const Home = () => {
 
     const navigate = useNavigate()
+
+    /* Tamanho da tela do usuário */
+    const { width, height } = useWindowSize()
 
     const { userData, listData } = useContext(UserContext)
     /* Modal open and clsoe */
@@ -95,6 +104,12 @@ const Home = () => {
 
     }
 
+    const congratulations = ( status ) => {
+
+
+        
+    }
+
     const loginCheck = () => {
 
         { !userData ? navigate('/') : console.log('Usuário logado')}
@@ -136,22 +151,26 @@ const Home = () => {
 
                     <FormBox>
 
-                        <ModalTitle>Adicione um hábtio!</ModalTitle>
+                        <CloseArea>
+                            <HiX size={26} style={{ cursor: 'pointer' }} onClick={() => handleClose()}/>
+                        </CloseArea>
 
-                        <TextField
-                            sx={{ width: '30rem'}}
-                            inputProps={{ maxLength: 30, style: {textAlign: 'center'} }}
-                            onChange={(event) => setHabbitTitle(event.target.value)}
+                        <ContentArea>
+                            <ModalTitle>Adicione um hábito!</ModalTitle>
+                            <TextField
+                                sx={{ width: '30rem'}}
+                                inputProps={{ maxLength: 30, style: {textAlign: 'center'} }}
+                                onChange={(event) => setHabbitTitle(event.target.value)}
                             
-                        />
-
-                        <Button
-                            sx={{ width: '30rem', height: '3rem', marginTop: '20px' }}
-                            variant='contained'
-                            onClick={() => createHabbit(habbitTitle)}
-                        >
-                            Adicionar
-                        </Button>
+                            />
+                            <Button
+                                sx={{ width: '30rem', height: '3rem', marginTop: '20px' }}
+                                variant='contained'
+                                onClick={() => createHabbit(habbitTitle)}
+                            >
+                                Adicionar
+                            </Button>
+                        </ContentArea>
 
                     </FormBox>
 
@@ -177,6 +196,14 @@ const Home = () => {
                 </HabbitContent>
 
             </MainContent>
+
+            {
+
+            }
+            {/* <Confetti
+                width={width}
+                height={height}
+            /> */}
 
         </>
 
