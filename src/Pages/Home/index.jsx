@@ -146,13 +146,13 @@ const Home = () => {
                         <ContentArea>
                             <ModalTitle>Adicione um hábito!</ModalTitle>
                             <TextField
-                                sx={{ width: '30rem'}}
+                                sx={{ width: '80%'}}
                                 inputProps={{ maxLength: 30, style: {textAlign: 'center'} }}
                                 onChange={(event) => setHabbitTitle(event.target.value)}
                             
                             />
                             <Button
-                                sx={{ width: '30rem', height: '3rem', marginTop: '20px' }}
+                                sx={{ width: '80%', height: '3rem', marginTop: '20px' }}
                                 variant='contained'
                                 onClick={() => createHabbit(habbitTitle)}
                             >
