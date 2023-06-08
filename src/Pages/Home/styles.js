@@ -17,6 +17,12 @@ export const MainContent = styled.section`
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 5px 5px 15px #C9C9C9;
+
+    @media (max-width: 700px) {
+        
+        width: 98%;
+
+    }
 `;
 
 export const HabbitContent = styled.ul`
@@ -33,6 +39,7 @@ export const HabbitContent = styled.ul`
 export const InvisibleFooter = styled.div`
     width: 100%;
     height: 20px;
+    
 `;
 
 /* Modal */
@@ -47,10 +54,23 @@ export const ModalContainer = styled.div`
 `;
 
 export const FormBox = styled.div`
-    width: 50%;
+    width: 40%;
     height: 60%;
     background-color: #FFFFFF;
-    border: 1px solid black;
+    border-radius: 10px;
+    
+    @media (max-width: 1056px) {
+        
+        width: 80%;
+        height: 70%;
+
+    }
+
+    @media (max-width: 750px) {
+
+        width: 95%;
+
+    }
 `;
 
 export const CloseArea = styled.div`
@@ -67,9 +87,16 @@ export const ContentArea = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    
 `;
 
 export const ModalTitle = styled.h1`
     color: #1565C0;
     margin-bottom: 30px;
+
+    @media (max-width: 750px) {
+        font-size: 26px;
+
+    }
 `;

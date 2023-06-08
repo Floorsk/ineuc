@@ -15,6 +15,8 @@ export const ButtonArea = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
 `;
 
 export const CreateItem = styled.button`
@@ -27,6 +29,12 @@ export const CreateItem = styled.button`
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
+
+    @media (max-width: 700px) {
+        
+        font-size: 12px;
+
+    }
 `;
 
 export const DaysArea = styled.ul`
@@ -39,5 +47,10 @@ export const DaysArea = styled.ul`
 `;
 
 export const Items = styled.li`
+    
+    @media (max-width: 700px) {
+        
+        font-size: 12px;
 
+    }
 `;

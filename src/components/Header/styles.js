@@ -11,12 +11,23 @@ export const HeaderContainer = styled.header`
 
 export const NavContainer = styled.nav`
     width: 70%;
+
+    @media (max-width: 1056px) {
+        
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 `;
 
 export const NavContent = styled.ul`
     display: flex;
     align-items: center;
     list-style: none;
+
+    
 `;
 
 export const NavButtons = styled.li`
@@ -27,10 +38,28 @@ export const NavButtons = styled.li`
     color: #FFFFFF;
     text-decoration: none;
     cursor: pointer;
+
+    @media (max-width: 1056px) {
+        
+        margin: 0 1rem;
+
+    }
+
+    @media (max-width: 640px) {
+
+        margin: 0 2.5px;
+        
+        :nth-child(1n) {
+            font-size: 12px;
+        }
+        
+
+    }
 `;
 
 export const Span = styled.span`
     font-size: 16px;
     font-weight: 700;
     margin: 0 5px;
+
 `;
