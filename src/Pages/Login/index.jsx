@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { UserContext } from '../../Context/UserContext'
+import { FaSpinner } from 'react-icons/fa';
 
 import {
     LoginContainer,
@@ -22,15 +23,19 @@ const Login = () => {
     const { userAuth } = useContext(UserContext)
     const navigate = useNavigate()
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const auth = async () => {
+
+        setLoading(true);
 
         const result = await userAuth(email, password)
 
         result ? navigate('/loading') : console.log('Fail')
 
+        setLoading(false);
     }
 
     return (
@@ -64,9 +69,15 @@ const Login = () => {
                     <Button
                         sx={{ width: '30rem', height: '3rem', marginTop: '20px' }}
                         variant='contained'
-                        onClick={() => {auth()}}/* Função autenticar login */
+                        onClick={() => { auth() }}
+                        loading={loading}
+                        disabled={loading}
                     >
-                        ENTRAR
+                        {loading ? (
+                            <FaSpinner color="#FFF" size={16} />
+                        ) : (
+                            <a>ENTRAR</a>
+                        )}
                     </Button>
 
 
