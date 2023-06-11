@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import { firebase, auth, firestore } from '../../firebase'
 import Habbit from '../components/Habbit';
+import { toast } from 'react-toastify';
 
 export const UserContext = createContext({})
 
@@ -19,7 +20,7 @@ function UserProvider({ children }) {
 
         if (!threwError) {
 
-            alert('Login efetuado com sucesso!')
+            toast.success("Login efetuado com sucesso!");
 
             const userId = auth.currentUser.uid
             localStorage.setItem('id', JSON.stringify(userId))
@@ -52,7 +53,7 @@ function UserProvider({ children }) {
             return true
 
         } else {
-            alert('Errou a senha ou ainda não é cadastrado!')
+            toast.warning("Senha incorreta ou usuário inválido!")
             return false
         }
 
@@ -61,12 +62,12 @@ function UserProvider({ children }) {
     const handleRegister = async (email, password, username) => {
 
         if (email.length === 0) {
-            alert('Por favor, insira seu e-mail');
+            toast.warning("Por favor, insira seu e-mail");
             return;
         }
 
         if (password.length === 0) {
-            alert('Por favor, insira sua senha');
+            toast.warning("Por favor, insira sua senha");
             return;
         }
 
@@ -89,12 +90,11 @@ function UserProvider({ children }) {
             })
 
         if (!signUpError) {
-
-            alert('Cadastro realizado com sucesso!')
+            toast.success("Cadastro realizado com sucesso!");
             return true
 
         } else {
-            alert('Não foi possível concluir o cadastro.')
+            toast.warning("Não foi possível concluir o cadastro.")
             return false
         }
     };
