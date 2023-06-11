@@ -37,13 +37,14 @@ const SignUp = () => {
 
     const handleEmailChange = (event) => {
         const value = event.target.value;
-        setEmail(value);
         setEmailError(confirmedEmail !== value);
+        setEmail(value);
     };
 
     const handleConfirmedEmailChange = (event) => {
         const value = event.target.value;
         setConfirmedEmail(value);
+        setEmailError(confirmedEmail !== value);
         setEmailError(email !== value);
     };
 
@@ -103,7 +104,6 @@ const SignUp = () => {
                             placeholder='Digite o seu nome de usuário'
                             onChange={handleUsernameChange}
                             value={username}
-                            error={emailError}
                         />
                         <TextField
                             sx={{ width: '30rem', marginTop: '15px' }}
@@ -112,6 +112,9 @@ const SignUp = () => {
                             onChange={handleEmailChange}
                             value={email}
                             error={emailError}
+                            helperText={
+                                emailError ? "Por favor, verifique se os e-mails digitados são iguais" : null
+                            }
                         />
                         <TextField
                             sx={{ width: '30rem', marginTop: '15px' }}
@@ -121,7 +124,7 @@ const SignUp = () => {
                             value={confirmedEmail}
                             error={emailError}
                             helperText={
-                                passwordError ? "Por favor, verifique se os e-mails digitados são iguais" : null
+                                emailError ? "Por favor, verifique se os e-mails digitados são iguais" : null
                             }
                         />
                         <TextField
@@ -131,6 +134,9 @@ const SignUp = () => {
                             onChange={handlePasswordChange}
                             value={password}
                             error={passwordError}
+                            helperText={
+                                passwordError ? "Por favor, verifique se as senhas estão iguais" : null
+                            }
                         />
                         <TextField
                             sx={{ width: '30rem', marginTop: '15px' }}

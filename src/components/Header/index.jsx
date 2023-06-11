@@ -31,6 +31,10 @@ const Header = () => {
                             <Link to={'/ajuda'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Ajuda</Link>
                         </NavButtons>
 
+                        <NavButtons>
+                            <Link to={'/'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Sair</Link>
+                        </NavButtons>
+
                     </NavContent>
 
                 </NavContainer>
