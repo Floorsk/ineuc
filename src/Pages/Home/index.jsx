@@ -26,6 +26,7 @@ import Days from '../../components/Days'
 import Habbit from '../../components/Habbit'
 
 import deleteAudio from '../../assets/delete.mp3'
+import { toast } from 'react-toastify'
 
 const Home = () => {
 
@@ -67,9 +68,7 @@ const Home = () => {
     const createHabbit = async (title) => {
 
         if (title == '') {
-
-            alert('Você não digitou nenhum hábito!')
-
+            toast.warning("Você não digitou nenhum hábito!");
         } else {
 
             setHabbitTitle('')
