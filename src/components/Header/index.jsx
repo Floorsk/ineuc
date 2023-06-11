@@ -28,10 +28,6 @@ const Header = () => {
                         </NavButtons>
 
                         <NavButtons>
-                            <Link to={'/SignUp'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Cadastre-se</Link>
-                        </NavButtons>
-
-                        <NavButtons>
                             <Link to={'/ajuda'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Ajuda</Link>
                         </NavButtons>
 
