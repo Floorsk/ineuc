@@ -32,6 +32,10 @@ const Header = () => {
                         </NavButtons>
 
                         <NavButtons>
+                            <Link to={'/user'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Usuário</Link>
+                        </NavButtons>
+
+                        <NavButtons>
                             <Link to={'/'} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF' }}>Sair</Link>
                         </NavButtons>
 

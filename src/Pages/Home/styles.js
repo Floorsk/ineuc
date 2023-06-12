@@ -7,8 +7,8 @@ export const WelcomeArea = styled.div`
 
 export const Title = styled.h1`
     margin: 10px 0;
-    color: #ff6961;
-    font-family: 'Chokokutai';
+    color: #1565C0;
+    font-family: 'Orbit';
 `;
 
 export const MainContent = styled.section`

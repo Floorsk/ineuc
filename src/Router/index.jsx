@@ -12,6 +12,7 @@ import Help from "../Pages/Help";
 import UserProvider from '../Context/UserContext'
 import LoadingScreen from "../Pages/LoadingScreen";
 import ToUse from "../Pages/ToUse";
+import User from "../Pages/User";
 
 const Router = () => {
 
@@ -49,6 +50,11 @@ const Router = () => {
         {
             path: '/touse',
             element: <ToUse/>,
+            errorElement: <ErrorPage />
+        },
+        {
+            path: '/user',
+            element: <User/>,
             errorElement: <ErrorPage />
         },
         {
